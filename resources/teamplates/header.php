@@ -9,6 +9,6 @@
 </head>
     <title>Actividad04PHP</title>
 </head>
-<body class="bg-yellow-100 h-screen ">
+<body class="bg-yellow-100 ">
      <h1 class='text-3xl font-bold underline text-clifford text-center pt-6 text-tahiti '>ACTIVIDAD 4 PHP</h1>
      <h1 class='text-3xl font-bold underline text-clifford text-center pt-6 text-tahiti '>Utilización de técnicas de acceso a datos</h1>

@@ -32,9 +32,9 @@
             }
     
             function crear_tabla_tarea($con){
-                mysqli_query($con, "create table if not exists tarea(usuario int , proyecto int , nombre varchar(255), estado int, primary key(usuario, proyecto), 
-                foreign key (usuario) references usuario(id), 
-                foreign key (proyecto) references proyecto(id));");
+                mysqli_query($con, "create table if not exists tarea(usuario int , proyecto int , tarea varchar(255), estado int, primary key(usuario, proyecto), 
+                foreign key (usuario) references usuario(id) on delete cascade, 
+                foreign key (proyecto) references proyecto(id) on delete cascade);");
                 
             }
             function aniadirAdmin($con){

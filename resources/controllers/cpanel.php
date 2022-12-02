@@ -12,11 +12,13 @@ $idSelect2 = $_POST['id_select2']?? null;
   //alta proyecto
 $proyecto = new Proyecto($_POST['proyecto']?? null);
 $proyectoModificar = new Proyecto($_POST['proyectoModificar']?? null);
-$idSelect3 = $_POST['id_select3']?? null;
+$idSelect4 = $_POST['id_select4']?? null;
 
   // Creacion tarea tabla tarea
 $tarea = new Tarea($_POST['id_select']?? null,0,$_POST['descripcion']?? null,$_POST['estado']?? null); 
-$modificarTarea = $_POST['tareaModificar'];
+$tareaActualizar = new Tarea($_POST['id_select3']?? null,$_POST['id_select4']?? null,$_POST['tareaModificar']?? null,$_POST['estado1']?? null); 
+// $modificarTarea = $_POST['tareaModificar'];
+
 //accedemos a la conexion
 $c = new Conexion();
 $b = new Basedatos();
@@ -45,14 +47,38 @@ mysqli_select_db($con,$b->db_name);
          header('Location: ../../views/cpanel.view.php');
          
       }
-  if(isset($_POST['submit4'])){
+ 
+  if(isset($_POST['submit5'])){
          
-         actualizarProyecto($con,$proyectoModificar->getNombreProyecto(),$idSelect3);
-         actualizarTarea($con,$modificarTarea,$idSelect3);
-         header('Location: ../../views/cpanel.view.php');
+    
+    
+    header('Location: ../../views/cpanel.view.php');
          
       }
-      
+  if(isset($_POST['submit7'])){
+ 
+   
+   $consulta = modificaProyecto($con,$_POST['id_select4']);
+   $consulta = obtener_resultados($consulta);
+   extract($consulta);
+   $_SESSION['id']= $id;
+   $_SESSION['nombreproyecto'] = $nombre;
+   actualizarProyecto($con,$_POST['proyectoModificar'],$id);
+  
+   header('Location: ../../views/cpanel.view.php');
+
+  }    
+  if(isset($_POST['submit6'])){
+ 
+    $tarea = $_POST['tareaModificar'];
+    $estado = $_POST['estado1'];
+    $id_proyecto = $_POST['id_select6'];
+   
+    actualizarTarea($con,$tarea,$estado,$id_proyecto);
+    header('Location: ../../views/cpanel.view.php');
+
+  }    
+
     
 } else {
   header('Location: ../../index.php');

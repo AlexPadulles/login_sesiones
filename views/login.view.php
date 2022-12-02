@@ -1,6 +1,6 @@
 
-<div class="container mx-auto mt-10 bg-green-200 hover:border-2 border-cyan-700 h-0 hover:h-max">  
-<section class="pt-24 ">
+<div class="container mx-auto mt-10 mb-14  bg-green-200 hover:border-2 border-cyan-700 h-0 hover:h-max">  
+<section class=" ">
   <div class="px-6 text-gray-800">
     
     <div
@@ -8,7 +8,7 @@
     >
     
       <div
-        class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12"
+        class="grow-0 h-3/4 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12"
       >
     
         <img
@@ -17,7 +17,7 @@
           alt="Sample image"
         />
       </div>
-      <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+      <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 h-3/4 mb-12 md:mb-0">
         <form  action="resources/controllers/login.php" method="POST">
           <!-- Nombre -->
           <div class="mb-6">

@@ -1,0 +1,2 @@
+Hola Daniel, para ejecutar la base de datos antes debes de descomentar las lineas de la 13 a la 20 en el archivo index.php
+al ejecutar el index te creará el usuario alex/1234, luego deberas comentarlas otra vez. 
