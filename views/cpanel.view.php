@@ -21,16 +21,21 @@ if(isset($_SESSION['nombre'])){
      header('Location: ../../index.php');
 
 ?>
+ <div class=" text-center mt-6">
+     <a href="../resources/controllers/logout.php">
+         <button type="button" class="text-green-300 hover:text-white border border-green-200 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-400 dark:text-green-400 dark:hover:text-white dark:hover:bg-green-300 dark:focus:ring-green-800">Desconectar</button>
+     </a>
+  </div>
 
  <div class=" container mx-auto w-3/4 ">
       
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-gray-300 mt-14 border-2 border-gray-900"> 
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-gray-300 mt-6 border-2 border-gray-900"> 
                             <div class=" mx-auto border-2 border-gray-900 hover:border-slate-500 mx-3 my-3 text-center">
                                 <section>
                                     <h2 class="text-center text-xl text-green-500 my-5">Da de alta al usuario</h2>
                                         <form action="../resources/controllers/cpanel.php" method="POST">
                                           <div class=" mb-3">
-                                          <label class="form-label"><p class="h4">Inserta el nombre de usurio</p></label>
+                                          <label class="form-label"><p class="h4">Inserta el nombre de usuario</p></label>
                                           <input name="nombre" class="form-control" type="text" placeholder="nombre" required>
                                           </div>
                                           <div class=" mb-3">
@@ -62,7 +67,7 @@ if(isset($_SESSION['nombre'])){
                                         <input name="descripcion" class="form-control" type="text" placeholder="descripción" required>
                                         </div>
                                         <div class="mb-3">
-                                            
+                                                       <laber class="pb-2"> Estado de la tarea</laber>
                                                       <div>
                                                             <input type="radio" id="contactChoice1" name="estado" value="1" checked/>
                                                             <label for="contactChoice1">Pendiente</label>
@@ -167,11 +172,7 @@ if(isset($_SESSION['nombre'])){
       </div>
     
  </div>
-   <div class=" mt-10 pb-10 text-center">
-     <a href="../resources/controllers/logout.php">
-         <button type="button" class="text-green-300 hover:text-white border border-green-200 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-400 dark:text-green-400 dark:hover:text-white dark:hover:bg-green-300 dark:focus:ring-green-800">Desconectar</button>
-     </a>
-  </div>
+  
  <?php
  require_once('../resources/teamplates/footer.php');
 ?>
